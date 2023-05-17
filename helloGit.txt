@@ -1,10 +1,15 @@
-hello git
+# coding=utf-8
+from selenium import webdriver 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys 
+import time
 
-我的第一版紀錄
+PATH = 'C:/Users/20230308/AppData/Local/Programs/Python/Python311'
+driver = webdriver.Chrome(PATH)
+driver.get('https://www.kingnetsmart.com.tw/mgmt/#/login')
+time.sleep(5)
 
-
-v1.0.1 紀錄
-
-我的1.0.2修改
-
-Version 1.0.1
+guest = driver.find_element(By.XPATH,'//*[@id="tab-username"]/form/div[1]/div/div')
+guest.send_keys("0914235719")
