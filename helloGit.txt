@@ -8,8 +8,8 @@ import time
 
 PATH = 'C:/Users/20230308/AppData/Local/Programs/Python/Python311'
 driver = webdriver.Chrome(PATH)
-driver.get('https://www.kingnetsmart.com.tw/mgmt/#/login')
+driver.get('gin')
 time.sleep(5)
 
 guest = driver.find_element(By.XPATH,'//*[@id="tab-username"]/form/div[1]/div/div')
-guest.send_keys("0914235719")
+guest.send_keys("099")
